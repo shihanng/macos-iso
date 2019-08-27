@@ -8,6 +8,11 @@ build: macos.iso.cdr
 	mv $< $(<:.cdr=)
 
 clean:
-	rm -f macos.sparseimage macos.iso.cdr macos.iso
+	rm -f macos.sparseimage macos.iso.cdr macos.iso && \
+	$(MAKE) -C clover clean
 
-.PHONY: create build clean
+
+clover:
+	$(MAKE) -C clover create
+
+.PHONY: create build clean clover

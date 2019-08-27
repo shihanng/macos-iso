@@ -3,6 +3,12 @@ A makefile to automate the creation of ISO image of macOS described in
 
 ```
 make build
+make clover
 ```
 
-and we should get `macos.iso`.
+and we should get `macos.iso` and `./clover/clover.iso`.
+
+```
+make clean
+```
+to remove all generated files.
